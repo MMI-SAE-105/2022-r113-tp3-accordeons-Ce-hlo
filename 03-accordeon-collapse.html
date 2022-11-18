@@ -5,8 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon avec x-collapse</title>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+   
+
   </head>
   <body>
     <h1>Accordéon avec <code>x-collapse</code></h1>
+    <div class="accordeon">
+      <section x-data="{
+            expanded:false,
+          }">
+        <button @click="expanded=!expanded">bouton 1</button>
+        <p x-show="expanded " x-collapse.duration.1000ms>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus at quisquam laborum optio vero
+          culpa in dignissimos a vitae, placeat sint dicta officiis laboriosam incidunt officia tenetur est! Cum, saepe.</p>
+      </section>
+      <section x-data="{
+            expanded:false,
+          }">
+        <button @click="expanded=!expanded">bouton 2</button>
+        <p x-show="expanded" x-collapse.duration.1000ms>Impedit culpa modi sequi a rerum enim voluptatum delectus excepturi perspiciatis commodi
+          temporibus vero neque animi eos ratione nesciunt minus, assumenda consequuntur facere sapiente non repellendus!
+          Quasi eaque libero unde.</p>
+      </section>
+      <section x-data="{
+            expanded:false,
+          }">
+        <button @click="expanded=!expanded">bouton 3</button>
+        <p x-show="expanded"  x-collapse.duration.1000ms>Quod eos corrupti natus, minus adipisci provident sapiente, nihil quia quisquam magnam architecto
+          alias accusamus velit, deleniti fuga! Quidem rem modi inventore eius ipsam nulla voluptates provident totam dolore
+          accusamus.</p>
+      </section>
+    </div>
   </body>
 </html>
