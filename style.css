@@ -1,4 +1,7 @@
 #accordeon {
+    padding: 0;
+    margin: 0;
+    display: flex;
     /* pour que les éléments soient alignés horizontalement */
     /* pour éviter les marges par défaut */
     /* pour éviter les "padding" par défaut */
